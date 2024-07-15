@@ -11,10 +11,73 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
         new Hammurabi().playGame();
     }
 
+
     void playGame() {
         // declare local variables here: grain, population, etc.
-        // statements go after the declations
+        int totalDeaths = 0, percentDied = 0, year = 0, population = 95, stores = 2800, immigrants = 5, deaths,
+                harvest = 3000, yield = 3, acres = harvest / yield, eaten = harvest - stores, landPrice, fullPeople, temp;
+
+
+
+        // statements go after the declarations
     }
 
     //other methods go here
+    public int askHowManyAcresToBuy(int price, int bushels){
+        return 0;
+    }
+
+    public int askHowManyAcresToSell(int acresOwned){
+        return 0;
+    }
+
+    public int askHowMuchGrainToFeedPeople(int bushels){
+        return 0;
+    }
+
+    public int askHowManyAcresToPlant(int acresOwned, int population, int bushels){
+        return 0;
+    }
+
+    public int plagueDeaths(int population){
+        return 0;
+    }
+
+    public int starvationDeaths(int population, int bushelsFedToPeople) {
+        return 0;
+    }
+
+    public boolean uprising(int population, int howManyPeopleStarved) {
+        return true;
+    }
+
+    public int immigrants(int population, int acresOwned, int grainInStorage) {
+        return 0;
+    }
+
+    public int harvest(int acres, int bushelsUsedAsSeed){
+        return 0;
+    }
+
+    public int grainEatenByRats(int bushels){
+        return 0;
+    }
+
+    public int newCostOfLand() {
+        return 0;
+    }
+
+    void printSummary() {
+
+    }
+
+    void finalSummary() {
+
+    }
+
+
+
+
+
+
 }
