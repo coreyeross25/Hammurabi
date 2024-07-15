@@ -26,15 +26,19 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
             printSummary(year, 0, 0, bushelsInStorage, 0, population, acresOwned, landPrice);
 
             int acresToBuy = askHowManyAcresToBuy(landPrice, bushelsInStorage);
+            acresOwned = acresToBuy + acresOwned;
+            bushelsInStorage = bushelsInStorage - acresToBuy * landPrice;
 
 
             int acresToSell = askHowManyAcresToSell(acresOwned);
-
+            acresOwned = acresOwned -acresToSell;
 
             int bushelsFedToPeople = askHowMuchGrainToFeedPeople(bushelsInStorage);
+            bushelsInStorage = bushelsInStorage - bushelsFedToPeople;
 
 
             int acresToPlant = askHowManyAcresToPlant(acresOwned, population, bushelsInStorage);
+
 
             int plagueDeaths = plagueDeaths(population);
             int starvationDeaths = starvationDeaths(population, bushelsFedToPeople);
@@ -43,12 +47,10 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
             if (!uprising) {
                 int immigrants = immigrants(population, acresOwned, bushelsInStorage);
 
-
                 int harvestYield = harvest(acresToPlant);
 
-
                 int ratsAte = grainEatenByRats(bushelsInStorage);
-
+                bushelsInStorage = bushelsInStorage -ratsAte;
 
                 landPrice = newCostOfLand();
                 printSummary(year, plagueDeaths, immigrants, harvestYield, ratsAte,
