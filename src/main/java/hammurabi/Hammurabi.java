@@ -40,7 +40,10 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
     }
 
     public int plagueDeaths(int population){
-        return 0;
+        if (rand.nextInt(100) < 15) {
+            return population / 2;
+        }
+            return 0;
     }
 
     public int starvationDeaths(int population, int bushelsFedToPeople) {
