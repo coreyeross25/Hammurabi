@@ -100,7 +100,7 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
         return 0;
     }
     public int newCostOfLand() {
-        return 0;
+        return rand.nextInt(7) + 17;
     }
 
     void printSummary() {
