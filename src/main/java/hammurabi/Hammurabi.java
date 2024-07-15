@@ -41,28 +41,28 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
         return acresTryingToBuy;
     }
 
-    public int askHowManyAcresToSell(int acresOwned){
+    public int askHowManyAcresToSell(int acresOwned) {
         return 0;
     }
 
-    public int askHowMuchGrainToFeedPeople(int bushels){
+    public int askHowMuchGrainToFeedPeople(int bushels) {
         return 0;
     }
 
-    public int askHowManyAcresToPlant(int acresOwned, int population, int bushels){
+    public int askHowManyAcresToPlant(int acresOwned, int population, int bushels) {
         return 0;
     }
 
-    public int plagueDeaths(int population){
+    public int plagueDeaths(int population) {
         if (rand.nextInt(100) < 15) {
             return population / 2;
         }
-            return 0;
+        return 0;
     }
 
     public int starvationDeaths(int population, int bushelsFedToPeople) {
         int neededForSurvival = population * 20;
-        if (bushelsFedToPeople < neededForSurvival){
+        if (bushelsFedToPeople < neededForSurvival) {
             return population - (bushelsFedToPeople / 20);
         }
         return 0;
@@ -81,21 +81,24 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
 
     public int immigrants(int population, int acresOwned, int grainInStorage) {
         // this if statement checks to see if there is enough land and enough food to make sure each person gets 20 grains
-        if (population < 0.5  * acresOwned && grainInStorage > population * 20) {
+        if (population < 0.5 * acresOwned && grainInStorage > population * 20) {
             return (20 * acresOwned + grainInStorage) / (100 * population) + 1;
         }
-       return 0;
+        return 0;
     }
 
-    public int harvest(int acres){
+    public int harvest(int acres) {
         int bushelsHarvested = rand.nextInt(6) + 1;
         return bushelsHarvested * acres;
     }
 
-    public int grainEatenByRats(int bushels){
+    public int grainEatenByRats(int bushels) {
+        if (rand.nextInt(100) < 40) {
+            int eaten = rand.nextInt(21) + 10;
+            return bushels * eaten / 100;
+        }
         return 0;
     }
-
     public int newCostOfLand() {
         return 0;
     }
