@@ -55,7 +55,7 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
         return 0;
     }
 
-    public int harvest(int acres, int bushelsUsedAsSeed){
+    public int harvest(int acres){
         return 0;
     }
 
