@@ -79,13 +79,17 @@ public class Hammurabi {         // must save in a file named hammurabi.Hammurab
 
     }
 
-
     public int immigrants(int population, int acresOwned, int grainInStorage) {
-        return 0;
+        // this if statement checks to see if there is enough land and enough food to make sure each person gets 20 grains
+        if (population < 0.5  * acresOwned && grainInStorage > population * 20) {
+            return (20 * acresOwned + grainInStorage) / (100 * population) + 1;
+        }
+       return 0;
     }
 
     public int harvest(int acres){
-        return 0;
+        int bushelsHarvested = rand.nextInt(6) + 1;
+        return bushelsHarvested * acres;
     }
 
     public int grainEatenByRats(int bushels){
